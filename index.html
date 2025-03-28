@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html lang="ar">
+<!DOCTYPE html><html lang="ar">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>شـركـة حورس</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
@@ -13,252 +12,218 @@
             background-color: #111;
             color: white;
             text-align: center;
-        }
+        }.header-container {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        background: url('https://i.imgur.com/0aR5QBu.png') no-repeat center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
 
-        .header-container {
-            position: relative;
-            width: 100%;
-            height: 250px;
-            background: url('https://i.imgur.com/0aR5QBu.png') no-repeat center;
-            background-size: cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
+    .logo {
+        font-size: 60px;
+        font-weight: bold;
+        color: white;
+        text-shadow: 0 0 10px #ff7300, 0 0 20px #ff7300, 0 0 40px #ff7300;
+        animation: moveText 3s infinite alternate ease-in-out;
+    }
 
-        .logo {
-            font-size: 60px;
-            font-weight: bold;
-            color: white;
-            text-shadow: 0 0 10px #ff7300, 0 0 20px #ff7300, 0 0 40px #ff7300;
-            animation: moveText 3s infinite alternate ease-in-out;
-        }
+    @keyframes moveText {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-10px); }
+    }
 
-        @keyframes moveText {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-10px); }
-        }
+    .navbar {
+        background-color: #222;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-        .navbar {
-            background-color: #222;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        transition: 0.3s;
+    }
 
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            transition: 0.3s;
-        }
+    .navbar a:hover {
+        background-color: #ff7300;
+        border-radius: 5px;
+    }
 
-        .navbar a:hover {
-            background-color: #ff7300;
-            border-radius: 5px;
-        }
+    .search-box {
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+    }
 
-        .search-box {
-            margin: 20px auto;
-            display: flex;
-            justify-content: center;
-        }
+    .search-box input {
+        padding: 10px;
+        width: 250px;
+        border: 2px solid #ff7300;
+        border-radius: 5px;
+        outline: none;
+    }
 
-        .search-box input {
-            padding: 10px;
-            width: 250px;
-            border: 2px solid #ff7300;
-            border-radius: 5px;
-            outline: none;
-        }
+    .search-box button {
+        padding: 10px 15px;
+        background-color: #ff7300;
+        border: none;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-left: 5px;
+    }
 
-        .search-box button {
-            padding: 10px 15px;
-            background-color: #ff7300;
-            border: none;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-left: 5px;
-        }
+    .products {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 20px;
+    }
 
-        .products {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            padding: 20px;
-        }
+    .product {
+        background: #222;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        width: 100%;
+        max-width: 200px;
+        transition: 0.3s;
+    }
 
-        .product {
-            background: #222;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            width: 200px;
-            transition: 0.3s;
-        }
+    .product:hover {
+        transform: scale(1.05);
+    }
 
-        .product:hover {
-            transform: scale(1.05);
-        }
+    .product img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
 
-        .product img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
+    .product h3 {
+        margin: 10px 0;
+        font-size: 16px;
+    }
 
-        .product h3 {
-            margin: 10px 0;
-            font-size: 16px;
-        }
+    .product .price {
+        color: #ff7300;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
 
-        .product .price {
-            color: #ff7300;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+    .product button {
+        background: #ff7300;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
 
-        .product button {
-            background: #ff7300;
-            color: white;
-            border: none;
-            padding: 8px 12px;
-            font-size: 14px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
+    .product button:hover {
+        background: #ff5000;
+    }
 
-        .product button:hover {
-            background: #ff5000;
-        }
+    .not-found {
+        font-size: 18px;
+        color: red;
+        margin-top: 20px;
+        display: none;
+    }
 
-        .not-found {
-            font-size: 18px;
-            color: red;
-            margin-top: 20px;
-            display: none;
-        }
+    .footer {
+        text-align: center;
+        padding: 20px;
+        background: #222;
+        color: white;
+    }
+</style>
 
-        .footer {
-            text-align: center;
-            padding: 20px;
-            background: #222;
-            color: white;
-        }
-
-    </style>
 </head>
 <body>
-
     <div class="header-container">
         <h1 class="logo">شـركة حـورس للتسويق العقاري</h1>
+    </div><nav class="navbar">
+    <div>
+        <a href="#">الرئيسية</a>
+        <a href="#">شقق ايجار</a>
+        <a href="#">شقق تمليك</a>
+        <a href="contact.html">تواصل معنا</a>
     </div>
+</nav>
 
-    <nav class="navbar">
-        <div>
-            <a href="#">الرئيسية</a>
-            <a href="#">شقق ايجار</a>
-            <a href="#">شقق تمليك</a>
-            <a href="contact.html">تواصل معنا</a>
-        </div>
-    </nav>
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="ابحث عن المنتج...">
+    <button onclick="searchProduct()"><i class="fa fa-search"></i></button>
+</div>
 
-    <div class="search-box">
-        <input type="text" id="searchInput" placeholder="ابحث عن المنتج...">
-        <button onclick="searchProduct()"><i class="fa fa-search"></i></button>
+<div class="products" id="productContainer">
+    <div class="product" data-name="شقة تمليك لقطه">
+        <img src="https://imgur.com/n1odBeG.png" alt="شقة تمليك لقطه">
+        <h3>شقة تمليك لقطه</h3>
+        <p class="price">السعر: 2,950,000 جنيه</p>
+        <a href="Apartment1.html"><button>أعرف المزيد</button></a>
     </div>
-
     <div class="products" id="productContainer">
 
-        <div class="product" data-name="مكتب حورس العقاري">
-            <img src="https://imgur.com/0aR5QBu.png" alt="مكتب حورس العقاري">
-            <h3>شقة تمليك متميزة</h3>
-            <p class="price">السعر: 1,700,000 جنيه</p>
-            <a href="Apartment1.html"><button>أعرف المزيد</button></a>
         </div>
-
-        <div class="product" data-name="شقة تمليك لقطه">
+            <div class="product" data-name="شقة تمليك لقطه">
             <img src="https://imgur.com/n1odBeG.png" alt="مكتب حورس العقاري">
             <h3>شقة تمليك لقطه</h3>
             <p class="price">السعر: 2,950,000 جنيه</p>
-            <a href="Apartment1.html"><button>أعرف المزيد</button></a>
-        </div>
-        
-        <div class="products" id="productContainer">
-        
-        <div class="product" data-name="شقة تمليك لوكس">
+            <a href="Apartment2.html"><button>أعرف المزيد</button></a>
+    </div>
+            <div class="products" id="productContainer">
+
+    </div>
+            <div class="product" data-name="شقة تمليك لوكس">
             <img src="https://imgur.com/BJ4oAFP.png" alt="مكتب حورس العقاري">
             <h3>شقة تمليك لوكس</h3>
             <p class="price">السعر: 1,700,00 جنيه</p>
             <a href="Apartment3.html"><button>أعرف المزيد</button></a>
-        </div>
+     </div> 
+     
+     <div class="products" id="productContainer">
 
-        </div>
-        
-         <div class="products" id="productContainer">
-        
-        <div class="product" data-name="شقة تمليك فاخره">
-            <img src="https://imgur.com/2ZgjcpE.png" alt="مكتب حورس العقاري">
-            <h3>شقة تمليك فاخره</h3>
-            <p class="price">السعر: 1,700,00 جنيه</p>
-            <a href="Apartment4.html"><button>أعرف المزيد</button></a>
-        </div>
-        
-        </div>
-        
-        <div class="product" data-name="شقة تمليك">
+       </div>
+     <div class="product" data-name="شقة تمليك فاخره">
+        <img src="https://imgur.com/2ZgjcpE.png" alt="شقة تمليك فاخره">
+        <h3>شقة تمليك فاخره</h3>
+        <p class="price">السعر: 1,700,000 جنيه</p>
+        <a href="Apartment4.html"><button>أعرف المزيد</button></a>
+    </div>
+    
+   <div class="products" id="productContainer">
+
+   </div>
+
+    <div class="product" data-name="شقة تمليك">
             <img src="https://imgur.com/j4VnT6N.png" alt="مكتب حورس العقاري">
             <h3>شقة تمليك </h3>
             <p class="price">السعر: 1,500,000 جنيه</p>
             <a href="Apartment5.html"><button>أعرف المزيد</button></a>
         </div>
+        
+        
+         </div>
 
-    <p class="not-found" id="notFoundMessage">❌ البحث غير متوفر الان حاول البحث في المنتجات...</p>
+<p class="not-found" id="notFoundMessage">❌ البحث غير متوفر الان حاول البحث في المنتجات...</p>
 
-    <footer class="footer">
-        <p>شــــــــركـــة حـــــورس للـــتــســويق الـعـقـاري</p>
-    </footer>
-
-    <script>
-        function normalizeText(text) {
-            return text
-                .replace(/ة/g, "ه")
-                .replace(/ى/g, "ي")
-                .replace(/\s+/g, " ")
-                .trim()
-                .toLowerCase();
-        }
-
-        function searchProduct() {
-            const searchTerm = normalizeText(document.getElementById('searchInput').value);
-            const products = document.querySelectorAll('.product');
-            let productFound = false;
-
-            products.forEach(product => {
-                const productName = normalizeText(product.getAttribute('data-name'));
-
-                const searchWords = searchTerm.split(" ");
-                const productWords = productName.split(" ");
-
-                const matchFound = searchWords.some(word => productWords.some(pWord => pWord.includes(word)));
-
-                if (matchFound) {
-                    product.style.display = 'block';
-                    productFound = true;
-                } else {
-                    product.style.display = 'none';
-                }
-            });
-
-            document.getElementById('notFoundMessage').style.display = productFound ? 'none' : 'block';
-        }
-    </script>
+<footer class="footer">
+    <p>شــــــــركـــة حـــــورس للـــتــســويق الـعـقـاري</p>
+</footer>
 
 </body>
-    </html
+    </html>
