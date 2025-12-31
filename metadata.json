@@ -1,0 +1,8 @@
+{
+  "name": "CodeMasr AI Dashboard",
+  "description": "A futuristic AI-powered developer dashboard inspired by the CodeMasr aesthetic, featuring real-time AI assistance, project management, and a sleek dark-mode UI.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
